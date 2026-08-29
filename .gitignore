@@ -66,4 +66,6 @@ Thumbs.db
 # Temporary files
 *.log
 *.tmp
-*.bak
+*.bak 
+*.duckdb
+*.duckdb.wal

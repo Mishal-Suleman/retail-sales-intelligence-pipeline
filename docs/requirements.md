@@ -29,6 +29,7 @@ A multi-branch retail/FMCG distribution chain generates daily transactional sale
 
 ## 5. Scope
 **In scope:** transactional sales data, product/store/customer/date dimensions, ETL pipeline, star schema model, SQL analysis, dashboard, basic forecasting, documentation.
+
 **Out of scope:** real-time streaming ingestion, external API integrations, ML beyond basic forecasting.
 
 ## 6. Success Criteria

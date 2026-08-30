@@ -70,7 +70,7 @@ def stratified_sample_by_month(df: pd.DataFrame, date_col: str, target_size: int
         df.groupby("_year_month", group_keys=False)
         .apply(lambda x: x.sample(frac=fraction, random_state=seed))
     )
-    sampled = sampled.drop(columns=["_year_month"])
+    sampled = sampled.drop(columns=["_year_month"], errors="ignore")
 
     logger.info(f"Sampled result: {len(sampled):,} rows across {df['_year_month'].nunique()} months")
     return sampled

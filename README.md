@@ -81,4 +81,4 @@ retail-sales-intelligence-pipeline/
 
 ---
 
-*Sections 5 to 14 (Data Workflow, Schema, Analysis, Insights, Recommendations, etc.) will be filled in as each pipeline stage is actually built, not before. Writing them now would mean documenting work that hasn't happened yet.*
+*Sections 5 to 14 (Data Workflow, Schema, Analysis, Insights, Recommendations, etc.) will be filled in as each pipeline stage is actually built, not before.*

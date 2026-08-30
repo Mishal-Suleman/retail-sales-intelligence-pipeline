@@ -6,67 +6,69 @@
 # ============================================================
 
 project:
-  name: "[Project Title]"
-  slug: "[project-title-lowercase-hyphenated]"   # Used for folder names, URLs
-  version: "1.0.0"
-  status: "completed"                             # Options: in-progress | completed | archived
-  last_updated: "YYYY-MM-DD"
+  name: "Retail Sales Intelligence Pipeline"
+  slug: "retail-sales-intelligence-pipeline"
+  version: "0.1.0"
+  status: "in-progress"
+  last_updated: "2026-08-29"
 
 author:
-  name: "[Your Full Name]"
-  role: "[Your Role or Title]"
-  github: "[github_username]"
-  linkedin: "[linkedin_profile_url]"
-  email: "[optional]"
+  name: "Mishal Suleman"
+  role: "Final-Year BSCS Student, Data Analytics"
+  github: "Mishal-Suleman"
+  
 
 project_type:
-  primary: "[e.g., exploratory-analysis]"        # See taxonomy below
+  primary: "end-to-end"
   secondary:
-    - "[e.g., dashboard]"
-    - "[e.g., data-pipeline]"
+    - "data-pipeline"
+    - "dashboard"
+    - "data-cleaning"
 
-# PROJECT TYPE TAXONOMY (pick what applies):
-# exploratory-analysis | sql-analysis | dashboard | data-pipeline
-# predictive-model | data-cleaning | reporting | visualization
-# end-to-end | automation | other
-
-domain: "[e.g., finance / healthcare / marketing / operations / education / other]"
+domain: "retail / fmcg"
 
 tools:
   languages:
-    - "[e.g., Python 3.11]"
-    - "[e.g., SQL]"
+    - "Python 3.x"
+    - "SQL"
   libraries:
-    - "[e.g., pandas 2.0]"
-    - "[e.g., matplotlib 3.7]"
+    - "pandas"
+    - "duckdb"
   platforms:
-    - "[e.g., GitHub]"
-    - "[e.g., Google Colab]"
+    - "GitHub"
+    - "DuckDB (local analytical database engine)"
   visualization:
-    - "[e.g., Power BI]"
-    - "[e.g., Tableau]"
-    - "[e.g., Plotly]"
+    - "Power BI"
 
 data:
   sources:
-    - name: "[Source name]"
-      type: "[csv / api / database / web-scrape / manual / public-dataset]"
-      access: "[public / private / simulated / anonymized]"
-  row_count_approx: "[e.g., 50000]"
+    - name: "Online Retail II (UCI Machine Learning Repository)"
+      type: "public-dataset"
+      access: "public"
+  row_count_approx: "80000 (sampled from ~1,070,000 source rows)"
   date_range:
-    start: "YYYY-MM-DD"
-    end: "YYYY-MM-DD"
+    start: "2009-12-01"
+    end: "2011-12-09"
 
 outputs:
-  - type: "[notebook / dashboard / report / csv / script / slides]"
-    path: "[relative/path/to/output]"
-    description: "[One-line description]"
+  - type: "script"
+    path: "scripts/logger_config.py"
+    description: "Shared logging setup used by every pipeline stage"
+  - type: "script"
+    path: "scripts/extract.py"
+    description: "Raw ingestion: combines both source sheets and applies stratified monthly sampling to ~80k rows"
+  - type: "report"
+    path: "docs/requirements.md"
+    description: "Problem statement, objectives, scope, and documented assumptions"
 
 dependencies:
-  file: "[requirements.txt / environment.yml / packages.R / none]"
-  notes: "[Any setup instructions or environment caveats]"
+  file: "requirements.txt"
+  notes: "Not yet created. Will list pandas, openpyxl, and duckdb once the transform and load stages are finalized."
 
 tags:
-  - "[keyword-1]"
-  - "[keyword-2]"
-  - "[keyword-3]"
+  - "python"
+  - "etl-pipeline"
+  - "data-modeling"
+  - "sql"
+  - "power-bi"
+  - "retail-analytics"
